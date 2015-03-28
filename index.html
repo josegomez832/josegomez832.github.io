@@ -20,6 +20,7 @@
     var map;
 function initialize() {
   //Portland 45.5424364, -122.654422
+  //Home 45.511449,-122.651549
   //oregon museum of natural science 45.50821, -122.665783
   //Oregon zoo 45.510042, -122.715902
   //Portland Japanese Garden 45.519136, -122.70678
@@ -33,6 +34,21 @@ function initialize() {
     center: { lat: 45.5424364, lng: -122.654422}
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+//Home
+//
+  var home = new google.maps.Marker({
+      position: {lat:45.511449, lng:-122.651549 },
+      map: map,
+      title: 'AirBnB Home'
+  });
+  var homeWindow = new google.maps.InfoWindow({
+      content: '<h3>Home</h3>'
+  });
+  google.maps.event.addListener(home, 'click', function() {
+      homeWindow.open(map, home);
+  });
+
+
 
 //Museum industrial
 //
