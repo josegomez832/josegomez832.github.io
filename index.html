@@ -1,26 +1,152 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>I rock :)</title>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+      #map-canvas{
+        width:100%;
+        height:100%;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+    <script>
+    var map;
+function initialize() {
+  //Portland 45.5424364, -122.654422
+  //oregon museum of natural science 45.50821, -122.665783
+  //Oregon zoo 45.510042, -122.715902
+  //Portland Japanese Garden 45.519136, -122.70678
+  //Portland art museum 45.516879, -122.683231
+  //Forest Park 45.575372, -122.77457
+  //Salt and Straw 45.528958, -122.6984342
+  //Shut up and eat 45.4931708, -122.6227966
+  //var myLatlng = new google.maps.LatLng(29.7977305,-95.5616014);
+  var mapOptions = {
+    zoom: 11,
+    center: { lat: 45.5424364, lng: -122.654422}
+  }
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+//Museum industrial
+//
+  var spring = new google.maps.Marker({
+      position: {lat:45.50821, lng:-122.665783 },
+      map: map,
+      title: 'Oregon Museum of Science and Industry'
+  });
+  var springWindow = new google.maps.InfoWindow({
+      content: '<h3>Oregon Museum of Science and Industry</h3>'
+  });
+  google.maps.event.addListener(spring, 'click', function() {
+      springWindow.open(map, spring);
+  });
 
-        <!-- Add your site or application content here -->
-        <h1>Welcome to josegomez832 github</h1>
+//Zoo Location
+  var houston = new google.maps.Marker({
+      position: { lat: 45.510042, lng: -122.715902},
+      map: map,
+      title: 'Zoo'
+  })
+  var houstonWindow = new google.maps.InfoWindow({
+      content: '<h3>Zoo bitches</h3>'
+  });
+  google.maps.event.addListener(houston, 'click', function() {
+      houstonWindow.open(map, houston);
+  });
+//Portland Japanese Garden
+  var leagueCity = new google.maps.Marker({
+      position: {lat: 45.519136, lng: -122.70678},
+      map:map,
+      title: 'Portland Japanese Garden'
+  })
+  leagueWindow = new google.maps.InfoWindow({
+      content:'<h3>Portland Japanese Garden</h3>'
+  });
+  google.maps.event.addListener(leagueCity, 'click', function(){
+      leagueWindow.open(map,leagueCity);
+  });
+  //Portland art museum
+  var artMuseum = new google.maps.Marker({
+      position: {lat: 45.516879, lng: -122.683231},
+      map:map,
+      title: 'Portland art museum'
+  })
+  artWindow = new google.maps.InfoWindow({
+      content:'<h3>Portland Art Museum</h3>'
+  });
+  google.maps.event.addListener(artMuseum, 'click', function(){
+      artWindow.open(map,artMuseum);
+  });
+  //Forest Park 
+  var forestPark = new google.maps.Marker({
+      position: {lat: 45.575372, lng: -122.77457},
+      map:map,
+      title: 'Forest Park'
+  })
+  forestWindow = new google.maps.InfoWindow({
+      content:'<h3>Forest Park</h3>'
+  });
+  google.maps.event.addListener(forestPark, 'click', function(){
+      forestWindow.open(map,forestPark);
+  });
+    //Salt and Straw 
+  var saltStraw = new google.maps.Marker({
+      position: {lat: 45.528958, lng:-122.6984342},
+      map:map,
+      title: 'Salt and Straw'
+  })
+  saltStrawWindow = new google.maps.InfoWindow({
+      content:'<h3>Salt and Straw</h3>'
+  });
+  google.maps.event.addListener(saltStraw, 'click', function(){
+      saltStrawWindow.open(map,saltStraw);
+  });
 
-        
-    </body>
+
+
+      //Shut up and eat 45.4931708, -122.6227966
+  var shutUp = new google.maps.Marker({
+      position: {lat: 45.4931708, lng: -122.6227966},
+      map:map,
+      title: 'Shut up and eat'
+  })
+  shutUpWindow = new google.maps.InfoWindow({
+      content:'<h3>Shut up and eat</h3>'
+  });
+  google.maps.event.addListener(shutUp, 'click', function(){
+      shutUpWindow.open(map,shutUp);
+  });
+
+      //burnside skatepark
+  var burnSide = new google.maps.Marker({
+      position: {lat: 45.523107, lng:-122.663523},
+      map:map,
+      title: 'Burnside skatepark'
+  })
+  burnSideWindow = new google.maps.InfoWindow({
+      content:'<h3>Burnside Skatepark</h3>'
+  });
+  google.maps.event.addListener(burnSide, 'click', function(){
+      burnSideWindow.open(map,burnSide);
+  });
+}
+// var locations = [
+//   ['Spring' , 30.065155, -95.435432, 3],
+//   ['Sam Houston', 29.79779, -95.561532, 2],
+//   ['League City', 29.502226, -95.114726, 1]
+// ];
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+    <div id="map-canvas"></div>
+  </body>
 </html>
