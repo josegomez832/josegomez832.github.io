@@ -39,8 +39,7 @@ function initialize() {
     center: { lat: 45.5424364, lng: -122.654422}
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-//Home
-//
+  //Home
   var home = new google.maps.Marker({
       position: {lat:45.511449, lng:-122.651549 },
       map: map,
@@ -48,16 +47,12 @@ function initialize() {
   });
   var homeWindow = new google.maps.InfoWindow({
       content: '<h3>Home</h3>'+
-      '<p>1553 Southeast Maple Avenue, Portland, OR 97214, United States</p>'
+      '<p>1553 Southeast Maple Avenue,<br />Portland, OR 97214, United States</p>'
   });
   google.maps.event.addListener(home, 'click', function() {
       homeWindow.open(map, home);
   });
-
-
-
-//Museum industrial
-//
+  //Museum industrial
   var spring = new google.maps.Marker({
       position: {lat:45.50821, lng:-122.665783 },
       map: map,
@@ -69,8 +64,7 @@ function initialize() {
   google.maps.event.addListener(spring, 'click', function() {
       springWindow.open(map, spring);
   });
-
-//Zoo Location
+  //Zoo Location
   var houston = new google.maps.Marker({
       position: { lat: 45.510042, lng: -122.715902},
       map: map,
@@ -82,7 +76,7 @@ function initialize() {
   google.maps.event.addListener(houston, 'click', function() {
       houstonWindow.open(map, houston);
   });
-//Portland Japanese Garden
+  //Portland Japanese Garden
   var leagueCity = new google.maps.Marker({
       position: {lat: 45.519136, lng: -122.70678},
       map:map,
@@ -118,7 +112,7 @@ function initialize() {
   google.maps.event.addListener(forestPark, 'click', function(){
       forestWindow.open(map,forestPark);
   });
-    //Salt and Straw 
+  //Salt and Straw 
   var saltStraw = new google.maps.Marker({
       position: {lat: 45.528958, lng:-122.6984342},
       map:map,
@@ -130,10 +124,7 @@ function initialize() {
   google.maps.event.addListener(saltStraw, 'click', function(){
       saltStrawWindow.open(map,saltStraw);
   });
-
-
-
-      //Shut up and eat 45.4931708, -122.6227966
+  //Shut up and eat 45.4931708, -122.6227966
   var shutUp = new google.maps.Marker({
       position: {lat: 45.4931708, lng: -122.6227966},
       map:map,
@@ -145,8 +136,7 @@ function initialize() {
   google.maps.event.addListener(shutUp, 'click', function(){
       shutUpWindow.open(map,shutUp);
   });
-
-      //burnside skatepark
+  //burnside skatepark
   var burnSide = new google.maps.Marker({
       position: {lat: 45.523107, lng:-122.663523},
       map:map,
@@ -157,6 +147,19 @@ function initialize() {
   });
   google.maps.event.addListener(burnSide, 'click', function(){
       burnSideWindow.open(map,burnSide);
+  });
+  //Voodoo Doughnut
+  var voodoo = new google.maps.Marker({
+      position: {lat: 45.5227023, lng:-122.673018},
+      map:map,
+      title: 'VooDoo Doughnut'
+  })
+  voodooWindow = new google.maps.InfoWindow({
+      content:'<h3>Voodoo Doughnut</h3>' +
+      '<p>Cash-only</p>'
+  });
+  google.maps.event.addListener(voodoo, 'click', function(){
+      voodooWindow.open(map,voodoo);
   });
 }
 // var locations = [
