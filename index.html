@@ -161,6 +161,32 @@ function initialize() {
   google.maps.event.addListener(voodoo, 'click', function(){
       voodooWindow.open(map,voodoo);
   });
+  //Ground Kontrol
+  var kontrol = new google.maps.Marker({
+      position: {lat: 45.523886, lng:-122.675871},
+      map:map,
+      title: 'Ground Kontrol'
+  })
+  groundKontrolWindow = new google.maps.InfoWindow({
+      content:'<h3>Ground Kontrol</h3>' +
+      '<p>Vintage video games & pinball machines in a futuristic 2-story arcade serving beer & light meals.</p>'
+  });
+  google.maps.event.addListener(kontrol, 'click', function(){
+      groundKontrolWindow.open(map,kontrol);
+  });
+  //Portland Saturday Market
+  var market = new google.maps.Marker({
+      position: {lat: 45.522489, lng:-122.669734},
+      map:map,
+      title: 'Portland Saturday Market'
+  })
+  marketWindow = new google.maps.InfoWindow({
+      content:'<h3>Portland Saturday Market</h3>' +
+      '<p>This popular Saturday & Sunday event offers craft & gift vendors, food carts, entertainment & more.</p>'
+  });
+  google.maps.event.addListener(market, 'click', function(){
+      marketWindow.open(map,market);
+  });
 }
 // var locations = [
 //   ['Spring' , 30.065155, -95.435432, 3],
