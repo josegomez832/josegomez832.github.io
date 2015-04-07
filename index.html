@@ -187,6 +187,20 @@ function initialize() {
   google.maps.event.addListener(market, 'click', function(){
       marketWindow.open(map,market);
   });
+  
+  //Burnside Brewing Company
+  var brewCo = new google.maps.Marker({
+      position: {lat: 45.522489, lng:-122.669734},
+      map:map,
+      title: 'Burnside Brewing Company'
+  })
+  brewingWindow = new google.maps.InfoWindow({
+      content:'<h3>Burnside Brewing Company</h3>' +
+      '<p>Pub with creative beers & upscale grub in a 1927 building with fir beams & lots of outdoor seating.</p>'
+  });
+  google.maps.event.addListener(brewCo, 'click', function(){
+      brewingWindow.open(map,brewCo);
+  });
 }
 // var locations = [
 //   ['Spring' , 30.065155, -95.435432, 3],
