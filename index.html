@@ -47,7 +47,8 @@ function initialize() {
       title: 'AirBnB Home'
   });
   var homeWindow = new google.maps.InfoWindow({
-      content: '<h3>Home</h3>'
+      content: '<h3>Home</h3>'+
+      '<p>1553 Southeast Maple Avenue, Portland, OR 97214, United States</p>'
   });
   google.maps.event.addListener(home, 'click', function() {
       homeWindow.open(map, home);
