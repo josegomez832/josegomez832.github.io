@@ -230,6 +230,20 @@ function initialize() {
   google.maps.event.addListener(screendoor, 'click', function(){
       screenWindow.open(map,screendoor);
   });
+  //Blue Star
+  var bluestar = new google.maps.Marker({
+      position: {lat: 45.5101945, lng:-122.6224898},
+      map:map,
+      title: 'Blue Star',
+      icon: 'img/marker-food-128.png'
+  })
+  blueStarWindow = new google.maps.InfoWindow({
+      content:'<h3>Blue Star</h3>' +
+      '<p>This upmarket brioche-donut bakery features creative flavors & organic, locally sourced ingredients</p>'
+  });
+  google.maps.event.addListener(bluestar, 'click', function(){
+      blueStarWindow.open(map,bluestar);
+  });
 }
 // var locations = [
 //   ['Spring' , 30.065155, -95.435432, 3],
