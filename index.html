@@ -43,7 +43,8 @@ function initialize() {
   var home = new google.maps.Marker({
       position: {lat:45.511449, lng:-122.651549 },
       map: map,
-      title: 'AirBnB Home'
+      title: 'AirBnB Home',
+      icon: 'img/marker-128.png'
   });
   var homeWindow = new google.maps.InfoWindow({
       content: '<h3>Home</h3>'+
@@ -56,7 +57,8 @@ function initialize() {
   var spring = new google.maps.Marker({
       position: {lat:45.50821, lng:-122.665783 },
       map: map,
-      title: 'Oregon Museum of Science and Industry'
+      title: 'Oregon Museum of Science and Industry',
+      icon: 'img/marker-tourist-128.png'
   });
   var springWindow = new google.maps.InfoWindow({
       content: '<h3>Oregon Museum of Science and Industry</h3>'
@@ -68,7 +70,8 @@ function initialize() {
   var houston = new google.maps.Marker({
       position: { lat: 45.510042, lng: -122.715902},
       map: map,
-      title: 'Zoo'
+      title: 'Zoo',
+      icon: 'img/marker-tourist-128.png'
   })
   var houstonWindow = new google.maps.InfoWindow({
       content: '<h3>Zoo bitches</h3>'
@@ -80,7 +83,8 @@ function initialize() {
   var leagueCity = new google.maps.Marker({
       position: {lat: 45.519136, lng: -122.70678},
       map:map,
-      title: 'Portland Japanese Garden'
+      title: 'Portland Japanese Garden',
+      icon: 'img/marker-tourist-128.png'
   })
   leagueWindow = new google.maps.InfoWindow({
       content:'<h3>Portland Japanese Garden</h3>'
@@ -92,7 +96,8 @@ function initialize() {
   var artMuseum = new google.maps.Marker({
       position: {lat: 45.516879, lng: -122.683231},
       map:map,
-      title: 'Portland art museum'
+      title: 'Portland art museum',
+      icon: 'img/marker-tourist-128.png'
   })
   artWindow = new google.maps.InfoWindow({
       content:'<h3>Portland Art Museum</h3>'
@@ -104,7 +109,8 @@ function initialize() {
   var forestPark = new google.maps.Marker({
       position: {lat: 45.575372, lng: -122.77457},
       map:map,
-      title: 'Forest Park'
+      title: 'Forest Park',
+      icon: 'img/marker-tourist-128.png'
   })
   forestWindow = new google.maps.InfoWindow({
       content:'<h3>Forest Park</h3>'
@@ -116,7 +122,8 @@ function initialize() {
   var saltStraw = new google.maps.Marker({
       position: {lat: 45.528958, lng:-122.6984342},
       map:map,
-      title: 'Salt and Straw'
+      title: 'Salt and Straw',
+      icon: 'img/marker-food-128.png'
   })
   saltStrawWindow = new google.maps.InfoWindow({
       content:'<h3>Salt and Straw</h3>'
@@ -128,7 +135,8 @@ function initialize() {
   var shutUp = new google.maps.Marker({
       position: {lat: 45.4931708, lng: -122.6227966},
       map:map,
-      title: 'Shut up and eat'
+      title: 'Shut up and eat',
+      icon: 'img/marker-food-128.png'
   })
   shutUpWindow = new google.maps.InfoWindow({
       content:'<h3>Shut up and eat</h3>'
@@ -140,7 +148,8 @@ function initialize() {
   var burnSide = new google.maps.Marker({
       position: {lat: 45.523107, lng:-122.663523},
       map:map,
-      title: 'Burnside skatepark'
+      title: 'Burnside skatepark',
+      icon: 'img/marker-skate-128.png'
   })
   burnSideWindow = new google.maps.InfoWindow({
       content:'<h3>Burnside Skatepark</h3>'
@@ -152,7 +161,8 @@ function initialize() {
   var voodoo = new google.maps.Marker({
       position: {lat: 45.5227023, lng:-122.673018},
       map:map,
-      title: 'VooDoo Doughnut'
+      title: 'VooDoo Doughnut',
+      icon: 'img/marker-food-128.png'
   })
   voodooWindow = new google.maps.InfoWindow({
       content:'<h3>Voodoo Doughnut</h3>' +
@@ -165,7 +175,8 @@ function initialize() {
   var kontrol = new google.maps.Marker({
       position: {lat: 45.523886, lng:-122.675871},
       map:map,
-      title: 'Ground Kontrol'
+      title: 'Ground Kontrol',
+      icon: 'img/marker-beer-128.png'
   })
   groundKontrolWindow = new google.maps.InfoWindow({
       content:'<h3>Ground Kontrol</h3>' +
@@ -178,7 +189,8 @@ function initialize() {
   var market = new google.maps.Marker({
       position: {lat: 45.522489, lng:-122.669734},
       map:map,
-      title: 'Portland Saturday Market'
+      title: 'Portland Saturday Market',
+      icon: 'img/marker-tourist-128.png'
   })
   marketWindow = new google.maps.InfoWindow({
       content:'<h3>Portland Saturday Market</h3>' +
@@ -192,7 +204,8 @@ function initialize() {
   var brewCo = new google.maps.Marker({
       position: {lat: 45.522489, lng:-122.669734},
       map:map,
-      title: 'Burnside Brewing Company'
+      title: 'Burnside Brewing Company',
+      icon: 'img/marker-beer-128.png'
   })
   brewingWindow = new google.maps.InfoWindow({
       content:'<h3>Burnside Brewing Company</h3>' +
