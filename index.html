@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>I rock :)</title>
+    <title>Portland Trip</title>
     <style>
       html, body, #map-canvas {
         height: 100%;
@@ -213,6 +213,22 @@ function initialize() {
   });
   google.maps.event.addListener(brewCo, 'click', function(){
       brewingWindow.open(map,brewCo);
+  });
+
+
+  //Screen Door
+  var screendoor = new google.maps.Marker({
+      position: {lat: 45.523105, lng:-122.641648},
+      map:map,
+      title: 'Screen Door',
+      icon: 'img/marker-food-128.png'
+  })
+  screenWindow = new google.maps.InfoWindow({
+      content:'<h3>Screen Door</h3>' +
+      '<p>Local /organic Vegetable Sides & Salads, Butter Lettuce Salad, Soup Of The Day, Pimiento Cheese, Fried Okra, Hushpuppies, Crispy Fried...</p><p><a href="http://www.urbanspoon.com/cities/24-portland/restaurants/283263-screen-door/menu">Menu</p>'
+  });
+  google.maps.event.addListener(screendoor, 'click', function(){
+      screenWindow.open(map,screendoor);
   });
 }
 // var locations = [
