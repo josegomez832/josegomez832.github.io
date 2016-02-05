@@ -3,258 +3,120 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>Portland Trip</title>
-    <style>
-      html, body, #map-canvas {
-        height: 100%;
-        margin: 0px;
-        padding: 0px
-      }
-      #map-canvas{
-        width:100%;
-        height:100%;
-      }
-    </style>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
-    <script>
-    var map;
-function initialize() {
-  //Portland 45.5424364, -122.654422
-  //Home 45.511449,-122.651549
-  //oregon museum of natural science 45.50821, -122.665783
-  //Oregon zoo 45.510042, -122.715902
-  //Portland Japanese Garden 45.519136, -122.70678
-  //Portland art museum 45.516879, -122.683231
-  //Forest Park 45.575372, -122.77457
-  //Salt and Straw 45.528958, -122.6984342
-  //Shut up and eat 45.4931708, -122.6227966
-
-  //Need to add
-  //Rooster State Park 45.5146051,-122.2797267
-
-
-  //var myLatlng = new google.maps.LatLng(29.7977305,-95.5616014);
-  var mapOptions = {
-    zoom: 11,
-    center: { lat: 45.5424364, lng: -122.654422}
-  }
-  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-  //Home
-  var home = new google.maps.Marker({
-      position: {lat:45.511449, lng:-122.651549 },
-      map: map,
-      title: 'AirBnB Home',
-      icon: 'img/marker-128.png'
-  });
-  var homeWindow = new google.maps.InfoWindow({
-      content: '<h3>Home</h3>'+
-      '<p>1553 Southeast Maple Avenue,<br />Portland, OR 97214, United States</p>'
-  });
-  google.maps.event.addListener(home, 'click', function() {
-      homeWindow.open(map, home);
-  });
-  //Museum industrial
-  var spring = new google.maps.Marker({
-      position: {lat:45.50821, lng:-122.665783 },
-      map: map,
-      title: 'Oregon Museum of Science and Industry',
-      icon: 'img/marker-tourist-128.png'
-  });
-  var springWindow = new google.maps.InfoWindow({
-      content: '<h3>Oregon Museum of Science and Industry</h3>'
-  });
-  google.maps.event.addListener(spring, 'click', function() {
-      springWindow.open(map, spring);
-  });
-  //Zoo Location
-  var houston = new google.maps.Marker({
-      position: { lat: 45.510042, lng: -122.715902},
-      map: map,
-      title: 'Zoo',
-      icon: 'img/marker-tourist-128.png'
-  })
-  var houstonWindow = new google.maps.InfoWindow({
-      content: '<h3>Zoo bitches</h3>'
-  });
-  google.maps.event.addListener(houston, 'click', function() {
-      houstonWindow.open(map, houston);
-  });
-  //Portland Japanese Garden
-  var leagueCity = new google.maps.Marker({
-      position: {lat: 45.519136, lng: -122.70678},
-      map:map,
-      title: 'Portland Japanese Garden',
-      icon: 'img/marker-tourist-128.png'
-  })
-  leagueWindow = new google.maps.InfoWindow({
-      content:'<h3>Portland Japanese Garden</h3>'
-  });
-  google.maps.event.addListener(leagueCity, 'click', function(){
-      leagueWindow.open(map,leagueCity);
-  });
-  //Portland art museum
-  var artMuseum = new google.maps.Marker({
-      position: {lat: 45.516879, lng: -122.683231},
-      map:map,
-      title: 'Portland art museum',
-      icon: 'img/marker-tourist-128.png'
-  })
-  artWindow = new google.maps.InfoWindow({
-      content:'<h3>Portland Art Museum</h3>'
-  });
-  google.maps.event.addListener(artMuseum, 'click', function(){
-      artWindow.open(map,artMuseum);
-  });
-  //Forest Park 
-  var forestPark = new google.maps.Marker({
-      position: {lat: 45.575372, lng: -122.77457},
-      map:map,
-      title: 'Forest Park',
-      icon: 'img/marker-tourist-128.png'
-  })
-  forestWindow = new google.maps.InfoWindow({
-      content:'<h3>Forest Park</h3>'
-  });
-  google.maps.event.addListener(forestPark, 'click', function(){
-      forestWindow.open(map,forestPark);
-  });
-  //Salt and Straw 
-  var saltStraw = new google.maps.Marker({
-      position: {lat: 45.528958, lng:-122.6984342},
-      map:map,
-      title: 'Salt and Straw',
-      icon: 'img/marker-food-128.png'
-  })
-  saltStrawWindow = new google.maps.InfoWindow({
-      content:'<h3>Salt and Straw</h3>'
-  });
-  google.maps.event.addListener(saltStraw, 'click', function(){
-      saltStrawWindow.open(map,saltStraw);
-  });
-  //Shut up and eat 45.4931708, -122.6227966
-  var shutUp = new google.maps.Marker({
-      position: {lat: 45.4931708, lng: -122.6227966},
-      map:map,
-      title: 'Shut up and eat',
-      icon: 'img/marker-food-128.png'
-  })
-  shutUpWindow = new google.maps.InfoWindow({
-      content:'<h3>Shut up and eat</h3>'
-  });
-  google.maps.event.addListener(shutUp, 'click', function(){
-      shutUpWindow.open(map,shutUp);
-  });
-  //burnside skatepark
-  var burnSide = new google.maps.Marker({
-      position: {lat: 45.523107, lng:-122.663523},
-      map:map,
-      title: 'Burnside skatepark',
-      icon: 'img/marker-skate-128.png'
-  })
-  burnSideWindow = new google.maps.InfoWindow({
-      content:'<h3>Burnside Skatepark</h3>'
-  });
-  google.maps.event.addListener(burnSide, 'click', function(){
-      burnSideWindow.open(map,burnSide);
-  });
-  //Voodoo Doughnut
-  var voodoo = new google.maps.Marker({
-      position: {lat: 45.5227023, lng:-122.673018},
-      map:map,
-      title: 'VooDoo Doughnut',
-      icon: 'img/marker-food-128.png'
-  })
-  voodooWindow = new google.maps.InfoWindow({
-      content:'<h3>Voodoo Doughnut</h3>' +
-      '<p>Cash-only</p>'
-  });
-  google.maps.event.addListener(voodoo, 'click', function(){
-      voodooWindow.open(map,voodoo);
-  });
-  //Ground Kontrol
-  var kontrol = new google.maps.Marker({
-      position: {lat: 45.523886, lng:-122.675871},
-      map:map,
-      title: 'Ground Kontrol',
-      icon: 'img/marker-beer-128.png'
-  })
-  groundKontrolWindow = new google.maps.InfoWindow({
-      content:'<h3>Ground Kontrol</h3>' +
-      '<p>Vintage video games & pinball machines in a futuristic 2-story arcade serving beer & light meals.</p>'
-  });
-  google.maps.event.addListener(kontrol, 'click', function(){
-      groundKontrolWindow.open(map,kontrol);
-  });
-  //Portland Saturday Market
-  var market = new google.maps.Marker({
-      position: {lat: 45.522489, lng:-122.669734},
-      map:map,
-      title: 'Portland Saturday Market',
-      icon: 'img/marker-tourist-128.png'
-  })
-  marketWindow = new google.maps.InfoWindow({
-      content:'<h3>Portland Saturday Market</h3>' +
-      '<p>This popular Saturday & Sunday event offers craft & gift vendors, food carts, entertainment & more.</p>'
-  });
-  google.maps.event.addListener(market, 'click', function(){
-      marketWindow.open(map,market);
-  });
-  
-  //Burnside Brewing Company
-  var brewCo = new google.maps.Marker({
-      position: {lat: 45.522489, lng:-122.669734},
-      map:map,
-      title: 'Burnside Brewing Company',
-      icon: 'img/marker-beer-128.png'
-  })
-  brewingWindow = new google.maps.InfoWindow({
-      content:'<h3>Burnside Brewing Company</h3>' +
-      '<p>Pub with creative beers & upscale grub in a 1927 building with fir beams & lots of outdoor seating.</p>'
-  });
-  google.maps.event.addListener(brewCo, 'click', function(){
-      brewingWindow.open(map,brewCo);
-  });
-
-
-  //Screen Door
-  var screendoor = new google.maps.Marker({
-      position: {lat: 45.523105, lng:-122.641648},
-      map:map,
-      title: 'Screen Door',
-      icon: 'img/marker-food-128.png'
-  })
-  screenWindow = new google.maps.InfoWindow({
-      content:'<h3>Screen Door</h3>' +
-      '<p>Local /organic Vegetable Sides & Salads, Butter Lettuce Salad, Soup Of The Day, Pimiento Cheese, Fried Okra, Hushpuppies, Crispy Fried...</p><p><a href="http://www.urbanspoon.com/cities/24-portland/restaurants/283263-screen-door/menu">Menu</p>'
-  });
-  google.maps.event.addListener(screendoor, 'click', function(){
-      screenWindow.open(map,screendoor);
-  });
-  //Blue Star
-  var bluestar = new google.maps.Marker({
-      position: {lat: 45.5101945, lng:-122.6224898},
-      map:map,
-      title: 'Blue Star',
-      icon: 'img/marker-food-128.png'
-  })
-  blueStarWindow = new google.maps.InfoWindow({
-      content:'<h3>Blue Star</h3>' +
-      '<p>This upmarket brioche-donut bakery features creative flavors & organic, locally sourced ingredients</p>'
-  });
-  google.maps.event.addListener(bluestar, 'click', function(){
-      blueStarWindow.open(map,bluestar);
-  });
-}
-// var locations = [
-//   ['Spring' , 30.065155, -95.435432, 3],
-//   ['Sam Houston', 29.79779, -95.561532, 2],
-//   ['League City', 29.502226, -95.114726, 1]
-// ];
-google.maps.event.addDomListener(window, 'load', initialize);
-
-    </script>
+    <title>Jose Gomez Portfolio</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href="css/main.css" rel="stylesheet" />
   </head>
   <body>
-    <div id="map-canvas"></div>
+    <main class="container">
+      <div class="content">
+          <h1 class="hi">Hi there,</h1>
+          <p>You're probably wondering why a github page? Well, this is really a temporary page while I decide what to use to manage my portfolio site. A bit about myself, I develop with WordPress, it's my bread and butter. I build projects from scratch using the <a href="http://underscores.me/">underscore</a> theme. All my projects listed below are custom built.</p>
+          <p>New challenges can be scary but also teach us a lesson if we fail. I do look for new challenges. I experiment with new and current frameworks. I am currently learning on Ruby on Rails (only tests and little tutorials), nothing big to brag about...yet. I am a big beard supporter. I like to binge watch tv series on Netflix.</p>
+          <div class="skills">
+            <div class="languages column">
+              <h3>Languages</h3>
+              <ul>
+                <li>HTML/5</li>
+                <li>CSS/3</li>
+                <li>PHP</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>                
+              </ul>
+            </div>
+            <div class="technologies column">
+              <h3>Technologies</h3>
+              <ul>
+                <li>WordPress</li>
+                <li>SASS</li>
+                <li>Grunt</li>
+                <li>Git</li>
+                <li>Responsive Design</li>
+              </ul>
+            </div>
+            <div class="tools column">
+              <h3>Tools</h3>
+              <ul>
+                <li>Photoshop</li>
+                <li>Illustrator</li>
+                <li>Sublime Text</li>
+                <li>Invision</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </main>
+    <section class="portfolio container">
+      <h2>My work</h2>
+
+        <ul class="work-list">
+          <li>
+            <a href="http://www.shellhoustonopen.com/">
+              <div class="caption">
+                <h5>Shell Houston Open</h5>
+                <p>Development</p>
+              </div>
+
+            
+            <img src="img/thumb/shell-thumb.jpg" />
+            
+            <!-- <div class="description">
+              <h4>Responsibilities</h4>
+              <p>MMI Agency redesigned Shell Houston Open's website. Keeping the mobile audience in mind, MMI designed the site mobile first. Website is completely manageable for the client to easily update their content through the WordPress admin panel.</p>
+            </div> -->
+            </a>
+          </li>
+          <li>
+            <a href="https://www.guswortham.org/">
+              <div class="caption">
+                <h5>Gus Wortham</h5>
+                <p>Development</p>
+              </div>
+            <img src="img/thumb/gus-thumb.jpg" />
+            
+            <!-- <div class="description">
+              <h4>Responsibilities</h4>
+              <p></p>
+            </div> -->
+            </a>
+          </li>
+          <li>
+            <a href="http://www.shopsathc.com/">
+              <div class="caption">
+                <h5>The Shops at Houston Center</h5>
+                <p>Design &amp; Development</p>
+              </div>
+              <img src="img/thumb/shops-thumb.jpg" />
+            </a>
+          </li>
+          <li>
+            <a href="http://www.idiglex.com/">IDigLex</a>
+              <img src="img/thumb/idig-thumb.jpg" />
+              <p>Design &amp; Development</p></li>
+          <li>
+            <a href="http://www.gaidos.com/">Gaidos</a>
+            <img src="img/thumb/gaidos.jpg" />
+            <p>Development</p>
+          </li>
+          <li>
+            <a href="http://www.pelicanclubgalveston.com/">Pelican Club Galveston</a>
+            <img src="img/thumb/pelican-thumb.jpg" />
+            <p>Design &amp; Development</p></li>
+        </ul>
+      </section>
+      <section class="call-out">
+        <h4>Majority of my projects come from working at <a href="https://www.mmiagency.com/">MMI Agency</a>.</h4>
+      </section>
+      <section class="container">
+        <h4>Get in contact</h4>
+        <ul class="contact">
+          <li><a href="mailto:gomez.jose853@gmail.com" class="icon"><img src="img/1453601579_common-email-envelope-mail-glyph.png" /></a></li>
+          <li><a href="https://www.instagram.com/josegomez832/" class="icon "><img src="img/1453601648_instagram.png" /></a></li>
+          <li><a href="https://www.linkedin.com/in/josegomez1" class="icon "><img src="img/1453601637_square-linkedin.png" /></a></li>
+        </ul>
+      </section>
+      <footer>
+        <p>&copy; 2016 Jose Gomez</p>
+      </footer>
   </body>
 </html>

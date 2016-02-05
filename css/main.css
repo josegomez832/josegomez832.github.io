@@ -15,14 +15,19 @@ button,
 input,
 select,
 textarea {
-    color: #222;
+    color: #fff;
 }
 
 html {
     font-size: 1em;
     line-height: 1.4;
+    padding:0;
+    margin:0;
 }
-
+body{
+    background:url(../img/stardust.png);
+    margin: 0;
+}
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
@@ -96,12 +101,84 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-
-
-
-
-
+h1,h2,h3, h4{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+p, ul{
+    font-family: 'Open Sans', sans-serif;
+}
+.skills:after{
+    content: "";
+    clear:both;
+    min-height: 1px;
+}
+.column{
+    float:left;
+    width:33%;
+}
+.container {
+    max-width: 1100px;
+    width: 100%;
+    min-width: 400px;
+    margin: 0 auto;
+    padding:24px 30px;
+}
+.content{
+    padding-right:-30px;
+    padding-left:-30px;
+}
+a{
+    color:#FF9900;
+    text-decoration: none;
+}
+a:hover{
+    color:#EAB769;
+    font-weight:700;
+}
+ul.work-list li{
+    width:33%;
+    display: inline-block;
+    position: relative;
+}
+ul.work-list li img{
+    width:100%;
+}
+.caption{
+    position: absolute;
+    bottom:0;
+    width:100%;
+    background:rgba(0,0,0,0.4);
+}
+ul.contact, ul.work-list{
+    margin:0;
+    padding:0;
+}
+ul.contact li{
+    list-style:none;
+    display: inline-block;
+    margin-right:15px;
+}
+.call-out{
+    width:100%;
+    padding:35px;
+    text-align: center;
+    background:#424242;
+}
+.call-out p{
+    color:#000;
+}
+.portfolio{
+    clear:both;
+}
+footer{
+    background:#389CBD;
+    color:#fff;
+    width:100%;
+    padding:12px 0px;
+    text-align: center;
+}
 
 
 
