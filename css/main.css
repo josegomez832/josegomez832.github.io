@@ -123,7 +123,10 @@ p, ul{
     width: 100%;
     min-width: 400px;
     margin: 0 auto;
-    padding:24px 30px;
+    padding:60px 30px;
+}
+.connect{
+    padding-top:0px;
 }
 .content{
     padding-right:-30px;
@@ -141,6 +144,10 @@ ul.work-list li{
     width:33%;
     display: inline-block;
     position: relative;
+    margin-bottom:50px;
+}
+ul.contact li.last{
+    margin-right:0;
 }
 ul.work-list li img{
     width:100%;
@@ -151,9 +158,14 @@ ul.work-list li img{
     width:100%;
     background:rgba(0,0,0,0.4);
 }
+
 ul.contact, ul.work-list{
     margin:0;
     padding:0;
+}
+ul.contact{
+    width:190px;
+    margin:0 auto;
 }
 ul.contact li{
     list-style:none;
@@ -180,7 +192,10 @@ footer{
     text-align: center;
 }
 
-
+span.small{
+    font-size: 12px;
+    text-transform: initial;
+}
 
 
 
@@ -307,7 +322,10 @@ footer{
        (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
-
+@media (max-width:420px){
+    .container{padding-left:0;padding-right:0;}
+    ul.work-list li{width:100%;}
+}
 /* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
