@@ -328,7 +328,7 @@ span.small{
     /* Style adjustments for high resolution devices */
 }
 @media(max-width:728px){
-
+    ul.work-list li{width:50%;}
 }
 @media (max-width:420px){
     .container{padding-left:0;padding-right:0;}
