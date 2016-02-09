@@ -101,6 +101,9 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+   *, *:before, *:after {
+    box-sizing: inherit;
+}
 h1,h2,h3, h4{
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
@@ -124,13 +127,15 @@ p, ul{
     min-width: 400px;
     margin: 0 auto;
     padding:60px 30px;
+    margin-right:auto;
+    margin-left:auto;
 }
 .connect{
     padding-top:0px;
 }
 .content{
-    padding-right:-30px;
-    padding-left:-30px;
+    margin-right:-30px;
+    margin-left:-30px;
 }
 a{
     color:#FF9900;
@@ -321,6 +326,9 @@ span.small{
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
+}
+@media(max-width:728px){
+
 }
 @media (max-width:420px){
     .container{padding-left:0;padding-right:0;}
