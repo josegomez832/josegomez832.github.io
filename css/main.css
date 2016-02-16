@@ -201,6 +201,9 @@ img.bio{
     width:175px;
     margin:0 auto;
 }
+.col-md-4.portfolio{
+    margin-bottom:50px;
+}
 .portfolio img{
     width:100%;
 }
