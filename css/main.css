@@ -207,8 +207,21 @@ img.bio{
 .portfolio img{
     width:100%;
 }
-
-
+a.button{
+    background:#FF9900;
+    background: -webkit-linear-gradient(#FF9900, #DE8807);
+    color:#fff;
+    padding:10px 15px;
+    margin: 25px 0px;
+    display: block;
+    width:180px;
+    border-radius: 5px;
+}
+a.button:hover{
+    font-weight: normal;
+    background: #DE8807;
+    text-decoration: none;
+}
 
 
 
