@@ -28,6 +28,10 @@ body{
     background:url(../img/stardust.png);
     margin: 0;
 }
+.me{
+    background:url(../img/me.jpg) no-repeat center center;
+    background-size:cover;
+}
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
@@ -109,11 +113,47 @@ h1,h2,h3, h4{
     color: #fff;
 }
 h1.hi{
-    margin-top:175px;
+   /* margin-top:175px;*/
 }
 p, ul{
     font-family: 'Open Sans', sans-serif;
     color: #fff;
+    font-size:16px;
+    line-height: 28px;
+    margin-bottom:15px;
+}
+ul.social{
+    margin:0;
+    padding:0;
+}
+ul.social li{
+    list-style: none;
+    display: inline-block;
+    padding:10px;
+}
+ul.social i.fa{
+    font-size:20px;
+}
+p span{
+    font-weight: 700;
+}
+#header{
+    background:url(../img/main.jpg) center center fixed;
+    background-size:cover;
+    text-align: center;
+    padding-top:25px;
+    padding-bottom:25px;
+}
+img#intro_pic{
+   /* max-width:100%;
+    width:90%;
+    position: relative;
+    top:120px;*/
+    width:220px;
+    height:220px;
+    border-radius:100px;
+    display: block;
+    margin:0 auto;
 }
 .skills:after{
     content: "";
@@ -137,6 +177,7 @@ p, ul{
 a{
     color:#FF9900;
     text-decoration: none;
+    
 }
 a:hover{
     color:#EAB769;
@@ -184,13 +225,16 @@ ul.contact li{
     color:#000;
 }
 footer{
-    background:#389CBD;
+    background:#082f55;
     color:#fff;
     width:100%;
     padding:12px 0px;
     text-align: center;
 }
-
+footer p{
+    margin:0;
+    font-size:12px;
+}
 span.small{
     font-size: 12px;
     text-transform: initial;
@@ -207,6 +251,10 @@ img.bio{
 .portfolio img{
     width:100%;
 }
+p a.button{
+    text-align: center;
+
+}
 a.button{
     background:#FF9900;
     background: -webkit-linear-gradient(#FF9900, #DE8807);
@@ -216,18 +264,118 @@ a.button{
     display: block;
     width:180px;
     border-radius: 5px;
+    font-size:14px;
+    margin:0 auto;
 }
-a.button:hover{
+a.button:hover, .grid figcaption a:hover{
     font-weight: normal;
     background: #DE8807;
     text-decoration: none;
 }
+.portfolio p, .portfolio h4, h2.section-title{
+    text-align: center;
+}
+h2.section-title{
+    color:#082f55;
+    padding-bottom:20px;
+}
+.portfolio a.button{
+    margin:0 auto;
+}
+.grid figure {
+    margin: 0;
+    position: relative;
+}
 
+.grid figure img {
+    max-width: 100%;
+    display: block;
+    position: relative;
+}
 
+.grid figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background: #082f55;
+    color: #fff;
+}
+.grid figcaption h3 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+.grid figcaption a {
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 2px;
+    display: inline-block;
+    background: #FF9900;
+    color: #fff;
+}
+.portfolio-hover figure {
+    overflow: hidden;
+}
 
+.portfolio-hover figure img {
+    -webkit-transition: -webkit-transform 0.4s;
+    -moz-transition: -moz-transform 0.4s;
+    transition: transform 0.4s;
+}
 
+.portfolio-hover figure:hover img,
+.portfolio-hover figure.cs-hover img {
+    -webkit-transform: translateY(-50px);
+    -moz-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    transform: translateY(-50px);
+}
 
+.portfolio-hover figcaption {
+    height: 100px;
+    width: 100%;
+    top: auto;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+    -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+    transition: transform 0.4s, opacity 0.1s 0.3s;
+}
 
+.portfolio-hover figure:hover figcaption,
+.portfolio-hover figure.cs-hover figcaption {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+    -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+    transition: transform 0.4s, opacity 0.1s;
+}
+
+.portfolio-hover figcaption a {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+section.container-fluid{
+    padding-top:45px;
+    padding-bottom:45px;
+    color:#000;
+}
+section.container-fluid p, section.container-fluid h4{
+    color:#000;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
