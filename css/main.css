@@ -292,7 +292,23 @@ h2.section-title{
     display: block;
     position: relative;
 }
-
+.browser{
+    height: 480px;
+    overflow: scroll;
+    margin-top:30px;
+}
+.browser img{
+    max-width:100%;
+}
+ul.skills {
+    margin: 0;
+    padding: 0;
+}
+ul.skills li {
+    display: inline-block;
+    list-style: none;
+    padding: 0px 8px 8px 8px;
+}
 .grid figcaption {
     position: absolute;
     top: 0;
